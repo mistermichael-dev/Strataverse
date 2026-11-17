@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://50ngv24xs5a3"]
+
+[node name="mods" type="Control" unique_id=938047039]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1854197794]
+
+[node name="Button" type="Button" parent="." unique_id=1027877104]
+layout_mode = 0
+offset_right = 575.0
+offset_bottom = 303.0
+text = "some mods"

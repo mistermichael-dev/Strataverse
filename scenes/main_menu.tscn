@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://ddvy3gfnf7yv"]
+
+[ext_resource type="Script" uid="uid://g3uuwqx3vglb" path="res://scripts/main_meue.cs" id="1_ekxnf"]
+
+[node name="Main menu" type="Control" unique_id=169665684]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 14.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=399672582]
+position = Vector2(581, 326)
+
+[node name="Label" type="Label" parent="." unique_id=1395637759]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+clip_children = 2
+oversampling_with_scale = 1
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 512.0
+offset_top = 96.0
+offset_right = -526.0
+offset_bottom = -498.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Realistic Craft"
+
+[node name="Singelplayer" type="Button" parent="." unique_id=259112435]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 478.0
+offset_top = 222.0
+offset_right = -472.0
+offset_bottom = -375.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Singelplayer"
+script = ExtResource("1_ekxnf")
+
+[node name="Multiplayer" type="Button" parent="." unique_id=1645810227]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 478.0
+offset_top = 279.0
+offset_right = -474.0
+offset_bottom = -313.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Multiplayer"
+script = ExtResource("1_ekxnf")
+
+[node name="Settings" type="Button" parent="." unique_id=1168186346]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 477.0
+offset_top = 343.0
+offset_right = -472.0
+offset_bottom = -255.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+script = ExtResource("1_ekxnf")
+
+[node name="Mods" type="Button" parent="." unique_id=1073745363]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 477.0
+offset_top = 402.0
+offset_right = -473.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mods"
+script = ExtResource("1_ekxnf")
+
+[node name="Quit" type="Button" parent="." unique_id=1449925957]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 477.0
+offset_top = 462.0
+offset_right = -473.0
+offset_bottom = -131.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Qiut"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1231324226]
+position = Vector2(570.99994, 322.50003)
+scale = Vector2(0.99145293, 1.3019999)

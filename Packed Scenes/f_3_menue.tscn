@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bevw8rv4ue68y"]
+
+[ext_resource type="Script" uid="uid://buge1tylxba00" path="res://scripts/debug_menue.cs" id="1_ipae2"]
+
+[node name="f3 menue" type="Control" unique_id=513525964]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ipae2")

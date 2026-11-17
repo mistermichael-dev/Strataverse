@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://xeg5v37oja8n"]
+
+[ext_resource type="Script" uid="uid://g3uuwqx3vglb" path="res://scripts/main_meue.cs" id="1_p2h1l"]
+
+[node name="Singelpalyer" type="Control" unique_id=1090290007]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1945350145]
+position = Vector2(574, 326)
+
+[node name="world" type="Button" parent="." unique_id=1348338933]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.009000001
+anchor_top = 0.020000001
+anchor_right = 0.989
+anchor_bottom = 1.029
+offset_left = 0.36800098
+offset_top = 0.03999901
+offset_right = -0.32800293
+offset_bottom = 0.20794678
+grow_horizontal = 2
+grow_vertical = 2
+text = "world
+"
+script = ExtResource("1_p2h1l")

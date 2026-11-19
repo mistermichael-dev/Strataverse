@@ -108,6 +108,7 @@ offset_bottom = -131.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Qiut"
+script = ExtResource("1_ekxnf")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1231324226]
 position = Vector2(570.99994, 322.50003)

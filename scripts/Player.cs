@@ -1,6 +1,7 @@
 [GlobalClass]
-[Tool]
-public partial class Player : CharacterBody3D{
+
+public partial class Player : CharacterBody3D
+{
 
     // stads
     [Export] public float Speed = 10.0f;
@@ -8,19 +9,16 @@ public partial class Player : CharacterBody3D{
     [Export] public float JumpVelocity = 5.0f;
     [Export] public float Gravity = 10.0f;
     [Export] public float MouseSensitivity = 0.0025f;
-
     [Export] public float StandCameraHeight = 1.6f;
     [Export] public float CrouchCameraHeight = 0.9f;
-
     private Node3D _head;
     private Camera3D _camera;
-
     private float _yaw;
     private float _pitch;
-
     private bool _crouching;
     //mause controll
-    public override void _Ready(){
+    public override void _Ready()
+    {
         _head = GetNode<Node3D>("head");
         _camera = GetNode<Camera3D>("head/Camera3D");
 
@@ -39,8 +37,10 @@ public partial class Player : CharacterBody3D{
         );
     }
 
-    public override void _Input(InputEvent @event){
-        if (@event is InputEventMouseMotion mouse){
+    public override void _Input(InputEvent @event)
+    {
+        if (@event is InputEventMouseMotion mouse)
+        {
             _yaw -= mouse.Relative.X * MouseSensitivity;
             _pitch -= mouse.Relative.Y * MouseSensitivity;
 
@@ -64,26 +64,32 @@ public partial class Player : CharacterBody3D{
         }
 
         if (@event is InputEventKey key){
-            if (key.Keycode == Key.Escape && key.Pressed){
+            if (key.Keycode == Key.Escape && key.Pressed)
+            {
                 Input.MouseMode = Input.MouseModeEnum.Visible;
             }
         }
 
-        if (@event is InputEventMouseButton button){
-            if (button.ButtonIndex == MouseButton.Left && button.Pressed){
+        if (@event is InputEventMouseButton button) {
+            if (button.ButtonIndex == MouseButton.Left && button.Pressed)
+            {
                 Input.MouseMode = Input.MouseModeEnum.Captured;
             }
         }
     }
     // pysics
-    public override void _PhysicsProcess(double delta){
+    public override void _PhysicsProcess(double delta)
+    {
         float dt = (float)delta;
 
         HandleMovement(dt);
         HandleCrouch(dt);
     }
     //W,A,S,D
-    private void HandleMovement(float delta) {
+   private void HandleMovement(float delta)
+    {
+       
+
         Vector3 direction = Vector3.Zero;
 
         if (Input.IsKeyPressed(Key.W))
@@ -114,14 +120,16 @@ public partial class Player : CharacterBody3D{
             direction.Z * currentSpeed
         );
 
-        if (!IsOnFloor()) {
+        if (!IsOnFloor())
+        {
             Velocity = new Vector3(
                 Velocity.X,
                 Velocity.Y - Gravity * delta,
                 Velocity.Z
             );
         }
-        else if (Velocity.Y < 0.0f){
+        else if (Velocity.Y < 0.0f)
+        {
             Velocity = new Vector3(
                 Velocity.X,
                 0.0f,
@@ -129,7 +137,8 @@ public partial class Player : CharacterBody3D{
             );
         }
 
-        if (Input.IsKeyPressed(Key.Space) && IsOnFloor()){
+        if (Input.IsKeyPressed(Key.Space) && IsOnFloor())
+        {
             Velocity = new Vector3(
                 Velocity.X,
                 JumpVelocity,
@@ -140,7 +149,9 @@ public partial class Player : CharacterBody3D{
         MoveAndSlide();
     }
 
-    private void HandleCrouch(float delta){
+
+    private void HandleCrouch(float delta)
+    {
         _crouching = Input.IsKeyPressed(Key.Ctrl);
 
         float targetHeight = _crouching

@@ -3,20 +3,26 @@
 [ext_resource type="Script" uid="uid://cfqhox8qc07rg" path="res://scripts/Player.cs" id="1_xrrm5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_go51g"]
+height = 1.8554688
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrrm5"]
 
-[node name="player" type="CharacterBody3D" unique_id=325547175]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1v8tq"]
+height = 1.8725586
+
+[node name="Player" type="CharacterBody3D" unique_id=325547175]
 script = ExtResource("1_xrrm5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1130669938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.072265625, 0)
 mesh = SubResource("CapsuleMesh_go51g")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=941536806]
 shape = SubResource("CapsuleShape3D_xrrm5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=596726410]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010487586, 0, -0.0031275451)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010487586, -0.09301758, -0.0031275451)
+shape = SubResource("CapsuleShape3D_1v8tq")
 
 [node name="head" type="Node3D" parent="." unique_id=1228148104]
 

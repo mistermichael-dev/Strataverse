@@ -2,11 +2,107 @@
 
 [ext_resource type="Script" uid="uid://buge1tylxba00" path="res://scripts/debug_menue.cs" id="1_ipae2"]
 
-[node name="f3 menue" type="Control" unique_id=513525964]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="f3_menue" type="CanvasLayer" unique_id=1598294689]
 script = ExtResource("1_ipae2")
+
+[node name="left margin" type="MarginContainer" parent="." unique_id=503150373]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 220.0
+offset_bottom = 629.0
+
+[node name="PanelContainer" type="PanelContainer" parent="left margin" unique_id=1010064678]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="left margin/PanelContainer" unique_id=961006248]
+layout_mode = 2
+
+[node name="fps" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=1164463044]
+layout_mode = 2
+
+[node name="position" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=1550162625]
+layout_mode = 2
+
+[node name="sight_rotation" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=1338141587]
+layout_mode = 2
+
+[node name="ram_use" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=272661044]
+layout_mode = 2
+
+[node name="gpu" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=1207570817]
+layout_mode = 2
+
+[node name="gpu_use" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=48640839]
+layout_mode = 2
+
+[node name="cpu" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=1380726742]
+layout_mode = 2
+
+[node name="cpu_use" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=482972769]
+layout_mode = 2
+
+[node name="biome" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=1635043345]
+layout_mode = 2
+
+[node name="dimention" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=135774835]
+layout_mode = 2
+
+[node name="loadet_entetyes" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=356538598]
+layout_mode = 2
+
+[node name="loadet_items" type="Label" parent="left margin/PanelContainer/VBoxContainer" unique_id=1366436100]
+layout_mode = 2
+
+[node name="right margin" type="MarginContainer" parent="." unique_id=2126339043]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -232.0
+offset_top = 20.0
+offset_right = -32.0
+offset_bottom = 631.0
+grow_horizontal = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="right margin" unique_id=1498277928]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="right margin/PanelContainer" unique_id=1788894137]
+layout_mode = 2
+
+[node name="structure_in_sight" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=1070451847]
+layout_mode = 2
+
+[node name="level" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=984363038]
+layout_mode = 2
+
+[node name="lockal_difficulty" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=1824119276]
+layout_mode = 2
+
+[node name="sys_is_stable" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=1124547113]
+layout_mode = 2
+
+[node name="gpu temperature" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=378962230]
+layout_mode = 2
+
+[node name="speed" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=414672998]
+layout_mode = 2
+
+[node name="armor" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=66040035]
+layout_mode = 2
+
+[node name="health" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=1947066166]
+layout_mode = 2
+
+[node name="day_or_night" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=769156612]
+layout_mode = 2
+
+[node name="payed_in_game_days" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=965499777]
+layout_mode = 2
+
+[node name="game mode" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=1729306496]
+layout_mode = 2
+
+[node name="deathes" type="Label" parent="right margin/PanelContainer/VBoxContainer" unique_id=218649571]
+layout_mode = 2

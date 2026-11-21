@@ -1,0 +1,27 @@
+# Godot 4+ spezifische Dateien
+.godot/
+*.translation
+
+
+export_presets.cfg
+
+# C# / .NET / Mono Build- und Cache-Ordner
+.mono/
+data_*/
+mono_crash.*.json
+bin/
+obj/
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE- und Editor-Einstellungen (Visual Studio, Rider, VS Code)
+.vs/
+.idea/
+.vscode/
+
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db

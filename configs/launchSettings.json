@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Realistic craft": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "$(ProjectDir)": ""
+      },
+      "debugEngines": "managed,native"
+    }
+  }
+}

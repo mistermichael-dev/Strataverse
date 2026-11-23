@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://buga25sq5t1xq"]
+
+[ext_resource type="Script" uid="uid://bhrfkeb4srxad" path="res://scripts/chunck.cs" id="1_qns7v"]
+
+[node name="chunk" type="StaticBody3D" unique_id=1679316682 node_paths=PackedStringArray("CollisionShape", "MeshInstance")]
+script = ExtResource("1_qns7v")
+CollisionShape = NodePath("CollisionShape3D")
+MeshInstance = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1893763609]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1438412743]

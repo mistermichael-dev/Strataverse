@@ -4,7 +4,7 @@ public partial class main_meue : Button{
         Pressed += ButtonPressed;
     }
 
-    private void ButtonPressed() {
+    private new void ButtonPressed() {
         GD.Print(Name + " wurde gedrückt!");
 
         if (Name == "Singelplayer") {

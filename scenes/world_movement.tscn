@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://f023f1fhx6us"]
 
 [ext_resource type="Script" uid="uid://de3s8ibdj82yq" path="res://scripts/FreeCam.cs" id="1_ee82y"]
+[ext_resource type="PackedScene" uid="uid://0mnceepfbpxc" path="res://Packed Scenes/level.tscn" id="1_i4apy"]
 [ext_resource type="PackedScene" uid="uid://difki8343uecl" path="res://Packed Scenes/player.tscn" id="1_y0j8c"]
 [ext_resource type="PackedScene" uid="uid://dcwrksmgobcdm" path="res://Packed Scenes/Inventory.tscn" id="2_hrvfb"]
 [ext_resource type="Script" uid="uid://cb66b5vn1tpee" path="res://scripts/ThirdPersoncam.cs" id="2_xnuh7"]
@@ -9,14 +10,6 @@
 [sub_resource type="BoxMesh" id="BoxMesh_go51g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ee82y"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_y0j8c"]
-size = Vector3(5, 0.2, 5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lp8hk"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_go51g"]
-size = Vector3(5, 1, 5)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y0j8c"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -32,8 +25,11 @@ glow_enabled = true
 
 [node name="world_movement" type="Node3D" unique_id=1936302934]
 
+[node name="Level" parent="." unique_id=1548811079 instance=ExtResource("1_i4apy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.893593, -38.584194, -5.916172)
+
 [node name="free_cam" type="Camera3D" parent="." unique_id=705996327]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.985981, 7.181122, 4.9057016)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7092, 7.2859683, 5.474152)
 script = ExtResource("1_ee82y")
 
 [node name="CharacterBody3D" type="MeshInstance3D" parent="free_cam" unique_id=1453510628]
@@ -45,25 +41,14 @@ mesh = SubResource("BoxMesh_go51g")
 shape = SubResource("BoxShape3D_ee82y")
 
 [node name="player" parent="." unique_id=325547175 groups=["player"] instance=ExtResource("1_y0j8c")]
-transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 2.0150485, 0)
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0.6541567, 4.310495, 4.6830955)
 velocity = Vector3(0, 0, 5)
 JumpVelocity = 10.0
 Gravity = 20.0
 
 [node name="third_personcam" type="Camera3D" parent="player" unique_id=1053011985]
-transform = Transform3D(0.5555556, 0, 0, 0, 0.5555556, 0, 0, 0, 0.5555556, 0, 2.0594397, 4.1430597)
+transform = Transform3D(0.5555556, 0, 0, 0, 0.5555556, 0, 0, 0, 0.5555556, -0.27732214, 2.0594397, 4.1430597)
 script = ExtResource("2_xnuh7")
-
-[node name="wold ground" type="StaticBody3D" parent="." unique_id=1420019634]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wold ground" unique_id=2103782610]
-transform = Transform3D(40, 0, 0, 0, 2, 0, 0, 0, 40, 0, 0, 0)
-mesh = SubResource("BoxMesh_y0j8c")
-surface_material_override/0 = SubResource("StandardMaterial3D_lp8hk")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wold ground" unique_id=2059855600]
-transform = Transform3D(39.999992, 0, 0, 0, 2, 0, 0, 0, 39.999992, 0, 0, 0)
-shape = SubResource("BoxShape3D_go51g")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=452784937]
 environment = SubResource("Environment_tcx0i")
